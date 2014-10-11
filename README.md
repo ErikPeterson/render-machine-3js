@@ -147,4 +147,9 @@ Unset a callback. To unset, you must pass the name of the event the callback was
 
 Trigger an event by name, with optional arguments to be passed to the callbacks.
 
+#To Do
+
+- add require.js support maybe
+- add get and set methods for properties
+- add support for collections of switchable cameras, scenes, and renderers
 
