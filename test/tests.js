@@ -10,10 +10,6 @@ global.window = require('test/mocks/window.js');
 var RenderMachine = require('test/coverage/RenderMachine.js');
 
 describe('RenderMachine', function(){
-    
-    
-
-
 
     describe('new', function(){
         
@@ -59,12 +55,12 @@ describe('RenderMachine', function(){
             clock.restore();
         });
 
-        it("should set the running property", function(){
+        it("should set the hasRun property", function(){
             var rm = new RenderMachine({camera: cam, scene: scene, renderer: renderer});
 
             rm.render();
 
-            rm.running.should.be.ok;
+            rm.hasRun.should.be.ok;
         });
 
         it("should render at the interval set by fps", function(){

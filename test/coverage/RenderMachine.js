@@ -5,7 +5,7 @@ _$jscoverage['lib/RenderMachine.js'].source=['var extend = require(\'node.extend
 'var RenderMachine = function(params){',
 '    this.setValues(params);',
 '    this.fps = this.fps || 60;',
-'    this.running = 0;',
+'    this.hasRun = false;',
 '};',
 '',
 'RenderMachine.prototype.setValues = function(options){',
@@ -15,8 +15,8 @@ _$jscoverage['lib/RenderMachine.js'].source=['var extend = require(\'node.extend
 'RenderMachine.prototype.render = function(){',
 '    var that = this;',
 '',
-'    if (!that.running){',
-'        that.running = true;',
+'    if (!that.hasRun){',
+'        that.hasRun = true;',
 '        that.trigger(\'firstRender\');',
 '    };',
 '',
@@ -102,7 +102,7 @@ this.setValues(params);
     _$jscoverage['lib/RenderMachine.js'][5]++;
 this.fps = this.fps || 60;
     _$jscoverage['lib/RenderMachine.js'][6]++;
-this.running = 0;
+this.hasRun = false;
 };
 
 _$jscoverage['lib/RenderMachine.js'][9]++;
@@ -117,9 +117,9 @@ RenderMachine.prototype.render = function(){
 var that = this;
 
     _$jscoverage['lib/RenderMachine.js'][16]++;
-if (!that.running){
+if (!that.hasRun){
         _$jscoverage['lib/RenderMachine.js'][17]++;
-that.running = true;
+that.hasRun = true;
         _$jscoverage['lib/RenderMachine.js'][18]++;
 that.trigger('firstRender');
     };
