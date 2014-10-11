@@ -36,7 +36,7 @@ module.exports = function(grunt){
           }
     });
 
-    grunt.registerTask('test', ['simplemocha:all','simplemocha:coverage']);
+    grunt.registerTask('test', ['blanket','simplemocha:all','simplemocha:coverage']);
     grunt.registerTask('report', 'Generate HTML coverage report file', function(){
         grunt.task.run('blanket');
         var exec = require('child_process').exec;
